@@ -12,8 +12,15 @@
 	<body>
 		<nav>
 			<ul class="navbar">
-			  <li><a href="index.html">Accueil</a></li>
-			  <li><a href="Documents\CV Paul Chavanon.pdf"  title="Cliquez pour voir le CV" target="_blank">Voir mon CV</a></li>
+			  <li><a href="index.html">Candidat</a></li>
+			  <li><a href="formation.html">Formation</a>
+			 	 <ul class="sub-menu">
+					<li class="navbar-item" data-target="section1"><a href="formation.html#alternance">Alternance</a></li>
+					<li class="navbar-item" data-target="section2"><a href="formation.html#PFMP">PFMP</a></li>
+					<li class="navbar-item" data-target="section3"><a href="formation.html#Parcours d'étudiant">Parcours d'étudiant</a></li>
+					<li class="navbar-item" data-target="section4"><a href="formation.html#diplômes">diplômes</a></li>
+				</ul>
+				
 			  <li><a href="etudes.html">Etudes</a>
 				<ul class="sub-menu">
 					<li><a href="etudes.html#formation">Résumé de formation</a></li>
@@ -27,77 +34,72 @@
 				  <li>?? License ??</li>
 				</ul>
 				</li>
-			  <li><a href="divers.html">Divers</a>
-			  	<ul class="sub-menu">
-					<li><a href="divers.html#Livre">Coauteur d'un livre</a></li>
-					<li><a href="divers.html#Impression3D">Impression 3D</a></li>
+			  <li><a href="UF3.html">UF3</a>
+				<ul class="sub-menu">
+					<li><a href="UF3.html#Cisco">Certifications Cisco</a></li>
+					<li><a href="UF3.html#ANSSI">Certifications ANSSI</a></li>
+					<li><a href="UF3.html#Openclassroom">Certifications Openclassroom</a></li>
 				</ul>
-			</li>
+			  </li>
+			  <li><a href="UF4.html">UF4</a>
+			  	<ul class="sub-menu">
+					<li><a href="UF4.html#Livre">Coauteur d'un livre</a></li>
+					<li><a href="UF4.html#Impression3D">Impression 3D</a></li>
+				</ul>
+			  </li>
 			  <li><a href="contact.html">Contact</a></li>
 			  <li><a href="glossaire.html">Glossaire</a></li>
 			  <li><a href="https://paul-chavanon.github.io/portfolio" title="Portfolio FR" target="_blank" ><img src="Image\Logos\drapeau1.png" height="16px" alt="Site en Francais" ></a></li>
 			  <li><a href="https://paul--chavanon-github-io.translate.goog/portfolio/index.html?_x_tr_sl=fr&_x_tr_tl=en&_x_tr_hl=fr&_x_tr_pto=wapp" title="Portfolio ENG" target="_blank"><img src="Image\Logos\drapeau2.png" height="16px" alt="Site en Anglais" ></a></li>
 			</ul>
 			
-		  </nav>
+		</nav>
+		<style>
+			.highlight {
+			  background-color: rgb(25, 0, 255);
+			  animation: fadeOut 1s ease-in-out forwards;
+			}
+		  
+			@keyframes fadeOut {
+			  0% {
+				background-color: rgb(25, 0, 255);
+			  }
+			  100% {
+				background-color: transparent;
+			  }
+			}
+		  </style>
+		  
+		  <script>
+			document.addEventListener('DOMContentLoaded', function() {
+			  var navbarItems = document.querySelectorAll('.navbar-item');
+		  
+			  navbarItems.forEach(function(item) {
+				item.addEventListener('click', function() {
+				  var targetId = this.dataset.target;
+				  var targetElement = document.getElementById(targetId);
+		  
+				  if (targetElement) {
+					// Ajouter la classe highlight à l'élément cible
+					targetElement.classList.add('highlight');
+		  
+					// Supprimer la classe highlight et le balisage <mark> après la durée de l'animation
+					setTimeout(function() {
+					  targetElement.classList.remove('highlight');
+					}, 1000); // Durée de l'animation en millisecondes (1 seconde ici)
+				  }
+				});
+			  });
+			});
+		  </script>
 
 <br>
 <p >
 <h1 style="color: white;" align="center"> <u>Portfolio</u> </h1>
 </p>
-<br>
-
- 
-
-<br id="formation">
-
-<div id="Formations" href="Formations">
-
-	<h2>Formations</h2>
-	<h3>Alternance</h3>
-	<li>En Septembre 2022, j'ai signé mon premier contrat d'apprentissage chez <a href="https://www.docaposte.com/" target="_blank">Docaposte</a> en tant que technicien support bureautique. J'ai pour mission de faire du déploiement de postes, de réssoudre les incidents des utilisateurs via des tickets Jira et de suivre le renouvellement des stocks par un suivi <a href="https://www.microsoft.com/fr-fr/microsoft-365/excel" target="_blank">Excel</a> détaillé, ansi que la gestion du parc informatique via lansweeper. J'apprends aussi à utiliser <a href="https://vmware.com/fr/products/horizon.html" target="_blank">VMware Horizon</a>.
-	</li>
-
-  <h3>PFMP</h3>
-  	<li>
-  		2020-2022 : 5 Périodes de Formation en Milieu Professionel de 3 à 7 semaines soit 22 semaines au Ministère de l'Economie et des Finances à Bercy, au service <strong>GTC</strong> où j'ai commencé à utiliser des logiciels Siemens comme Timeviewer et Planviewer qui permettent de programmer et de gérer à distance des équipements de régulations de températures ou de gestions d'éclairages par exemple. Egalement j'ai pu apprendre à configurer et mettre à jour des commutateurs (switchs) HP et 3COM en SSH ou via un serveur TFTP ou via un navigateur tout simplement.
-  	</li>
-  	
-  	<h3>Stage</h3>
-		<li>
-			2019 : 1 semaine chez <a href="https://www.microsoft.com/fr-fr/" target="_blank">Microsoft</a> France à Issy les Moulineaux, durant ce stage j'ai pu découvrir les nouveaux produits comme le casque de réalité mixte <a href="https://www.microsoft.com/fr-fr/d/hololens-2/91pnzzznzwcp?icid=Cat-Business-QuickLink7%20&activetab=pivot:caract%C3%A9ristiquestechniquestab#tab11b63f870-040a-4880-93c3-607ec1ebf30d" target="_blank">hololens</a> et les nouvelles inventions ergonomiques comme des claviers incurvés ou des souris inclinées.
-		</li> 
-		<li>
-			2019 : 1 semaine chez  <a href="https://www.rexel.com/fr/">Rexel</a> au Depôt de Valenton, durant ce stage j'ai pu apprendre à faire du facing, préparer des commandes, mais aussi avoir les premiers contact avec les clients.
-		</li> 
-	<h3>Formations</h3>
-	<p>
-		<li>
-			2022-2024 : Actuellement en BTS SIO SISR en alternance, au Lycée Paul BERT via le <strong>CFA</strong> de Créteil.
-		</li>
-		<li>
-			2019-2022 : Au lycée Paul BERT, à Maisons-Alfort (94), pour préparer BAC pro <strong>SN</strong> option <strong>RISC</strong> (Réseaux Inforamtique et Système Comuniquant)
-		</li>
-		<li>
-			2018-2019 : Au lycée Edouard BRANLY, à Créteil (94), en 3ieme prépa pro.
-		</li>	
-	<h3>Diplômes</h3>
-	<li>
-		2022 : Obtention du BAC pro <strong>SN</strong> avec mention (BIEN)
-	</li>
-	<li>
-			2019 : Obtention du <strong>BIA </strong> avec mention (Assez BIEN)
-	</li>
-	<li>
-			2019 : Obtention du <strong>DNB pro</strong> avec mention (BIEN)
-	</li>
-	</p>
-
-</div>
 
 <br>
 <br>
-
 
 <div id="bts-sio">
 	<br>
