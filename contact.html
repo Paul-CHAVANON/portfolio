@@ -43,6 +43,7 @@
 			  <li><a href="UF4.html">UF4</a>
 			  	<ul class="sub-menu">
 					<li><a href="UF4.html#Livre">Coauteur d'un livre</a></li>
+					<li><a href="UF4.html#BIA">Brevet d'Initiation Aéronotique</a></li>
 					<li><a href="UF4.html#Impression3D">Impression 3D</a></li>
 				</ul>
 			  </li>
@@ -101,26 +102,45 @@
 	
 	<h2>Contact</h2>
 
-<p class="texte-center"> Linkedin : <a href="https://www.linkedin.com/in/paul-chavanon-0a988822b/" title="LinkedIn" target="_blank"> Mon LinKedin</a>  - 
+<p class="texte-center"> Linkedin : <a href="https://www.linkedin.com/in/paul-chavanon" title="Accéder à mon profil sur linkedin.com" target="_blank"> Mon LinKedin</a>  - 
 		Email : <a href="mailto:chavanon.5.paul@gmail.com">chavanon.5.paul@gmail.com</a> - 
 		Num : <a href="tel:0642416939">06 42 41 69 39</a></p>
-<br> Merci de me contacter de préférence par Email
+<br> Merci de me contacter de préférence par Email  <br>
 
+<a href="https://www.linkedin.com/in/paul-chavanon/" target="_blank" title="Accéder à mon profil sur linkedin.com"> <img align="left" src="Image/Logos/LinkedIn-Symbole.png" height="100px" alt="Photo Paul CHAVANON" al></a>
+<a href="javascript:void(0)" onclick="copyEmailToClipboard('chavanon.5.paul@gmail.com')" title="chavanon.5.paul@gmail.com">
+	<img align="right" src="Image/Logos/Gmail-Logo.png" height="100px" alt="Photo Paul CHAVANON">
+  </a>
+  
+  <script>
+	function copyEmailToClipboard(email) {
+	  var tempInput = document.createElement('input');
+	  tempInput.value = email;
+	  document.body.appendChild(tempInput);
+	  tempInput.select();
+	  document.execCommand('copy');
+	  document.body.removeChild(tempInput);
+	  alert("L'adresse e-mail a été copiée dans le presse-papiers : " + email);
+	}
+  </script>
+  
+  
 <div class="contact-form">
-  <h3>Formulaire de contact</h3>
-  <form action="#" method="post">
-    <label for="name">Nom:</label>
-    <input type="text" id="name" name="name" placeholder="Votre nom" required>
-    
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
-    
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-    
-    <input type="submit" value="Envoyer">
-  </form>
-</div>
+	<h3>Formulaire de contact</h3>
+	<form action="#" method="post">
+	  <label for="name">Nom:</label>
+	  <input type="text" id="name" name="name" placeholder="Votre nom" required>
+	  
+	  <label for="email">Email:</label>
+	  <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+	  
+	  <label for="message">Message:</label>
+	  <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+	  
+	  <input type="submit" value="Envoyer">
+	</form>
+  </div>
+ 
 
 
 
